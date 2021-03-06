@@ -1,0 +1,12 @@
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Data\bin\Debug\net5.0\ETextBook.Data.deps.json
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Data\bin\Debug\net5.0\ETextBook.Data.dll
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Data\bin\Debug\net5.0\ref\ETextBook.Data.dll
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Data\bin\Debug\net5.0\ETextBook.Data.pdb
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Data\obj\Debug\net5.0\ETextBook.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Data\obj\Debug\net5.0\ETextBook.Data.AssemblyInfoInputs.cache
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Data\obj\Debug\net5.0\ETextBook.Data.AssemblyInfo.cs
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Data\obj\Debug\net5.0\ETextBook.Data.csproj.CoreCompileInputs.cache
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Data\obj\Debug\net5.0\ETextBook.Data.dll
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Data\obj\Debug\net5.0\ref\ETextBook.Data.dll
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Data\obj\Debug\net5.0\ETextBook.Data.pdb
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Data\obj\Debug\net5.0\ETextBook.Data.csprojAssemblyReference.cache
