@@ -2200,6 +2200,19 @@
         "runtime": {
           "bin/placeholder/ETextBook.Data.dll": {}
         }
+      },
+      "ETextBook.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "ETextBook.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ETextBook.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ETextBook.Service.dll": {}
+        }
       }
     }
   },
@@ -7584,11 +7597,17 @@
       "type": "project",
       "path": "../ETextBook.Data/ETextBook.Data.csproj",
       "msbuildProject": "../ETextBook.Data/ETextBook.Data.csproj"
+    },
+    "ETextBook.Service/1.0.0": {
+      "type": "project",
+      "path": "../ETextBook.Service/ETextBook.Service.csproj",
+      "msbuildProject": "../ETextBook.Service/ETextBook.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "ETextBook.Data >= 1.0.0",
+      "ETextBook.Service >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 5.0.3",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.3",
       "Microsoft.AspNetCore.Identity.UI >= 5.0.3",
@@ -7631,6 +7650,9 @@
           "projectReferences": {
             "C:\\Users\\n.zulpykharov\\source\\repos\\ETextBook\\ETextBook.Data\\ETextBook.Data.csproj": {
               "projectPath": "C:\\Users\\n.zulpykharov\\source\\repos\\ETextBook\\ETextBook.Data\\ETextBook.Data.csproj"
+            },
+            "C:\\Users\\n.zulpykharov\\source\\repos\\ETextBook\\ETextBook.Service\\ETextBook.Service.csproj": {
+              "projectPath": "C:\\Users\\n.zulpykharov\\source\\repos\\ETextBook\\ETextBook.Service\\ETextBook.Service.csproj"
             }
           }
         }

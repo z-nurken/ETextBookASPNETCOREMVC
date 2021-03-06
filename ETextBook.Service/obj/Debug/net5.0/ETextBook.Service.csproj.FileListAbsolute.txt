@@ -9,4 +9,7 @@ C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\obj\Debug\net5.0
 C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\obj\Debug\net5.0\ETextBook.Service.dll
 C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\obj\Debug\net5.0\ref\ETextBook.Service.dll
 C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\obj\Debug\net5.0\ETextBook.Service.pdb
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\bin\Debug\net5.0\ETextBook.Data.dll
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\bin\Debug\net5.0\ETextBook.Data.pdb
 C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\obj\Debug\net5.0\ETextBook.Service.csprojAssemblyReference.cache
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\obj\Debug\net5.0\ETextBook.Service.csproj.CopyComplete

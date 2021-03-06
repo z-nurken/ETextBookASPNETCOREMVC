@@ -451,3 +451,8 @@ C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook\obj\Debug\net5.0\Razor\V
 C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook\obj\Debug\net5.0\Razor\Views\Shared\Components\AdminFooter\Default.cshtml.g.cs
 C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook\obj\Debug\net5.0\Razor\Views\Shared\Components\AdminSideNav\Default.cshtml.g.cs
 C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook\obj\Debug\net5.0\Razor\Views\Shared\Components\AdminTopNav\Default.cshtml.g.cs
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook\obj\Debug\net5.0\Razor\Views\Blog\Create.cshtml.g.cs
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook\obj\Debug\net5.0\Razor\Views\Blog\Index.cshtml.g.cs
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook\obj\Debug\net5.0\Razor\Views\Blog\_Layout.cshtml.g.cs
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook\bin\Debug\net5.0\ETextBook.Service.dll
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook\bin\Debug\net5.0\ETextBook.Service.pdb

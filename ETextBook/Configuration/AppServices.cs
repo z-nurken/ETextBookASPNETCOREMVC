@@ -1,5 +1,8 @@
-﻿using ETextBook.Data;
+﻿using ETextBook.BusinessManagers;
+using ETextBook.BusinessManagers.Interfaces;
+using ETextBook.Data;
 using ETextBook.Data.Models;
+using ETextBook.Service.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -18,6 +21,12 @@ namespace ETextBook.Configuration
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages();
+        }
+
+        public static void AddCustomServices(this IServiceCollection services)
+        {
+            services.AddScoped<IBlogBusinessManager, BlogBusinessManager>();
+            services.AddScoped<IBlogService, Service.BlogService>();
         }
     }
 }

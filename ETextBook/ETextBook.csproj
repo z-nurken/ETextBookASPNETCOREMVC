@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ETextBook.Data\ETextBook.Data.csproj" />
+    <ProjectReference Include="..\ETextBook.Service\ETextBook.Service.csproj" />
   </ItemGroup>
 
 </Project>
