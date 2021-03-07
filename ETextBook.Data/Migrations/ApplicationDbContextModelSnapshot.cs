@@ -104,6 +104,7 @@ namespace ETextBook.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Content")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedOn")
@@ -116,7 +117,11 @@ namespace ETextBook.Data.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedOn")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

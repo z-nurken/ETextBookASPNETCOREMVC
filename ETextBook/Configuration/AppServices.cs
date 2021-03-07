@@ -1,12 +1,16 @@
-﻿using ETextBook.BusinessManagers;
+﻿using ETextBook.Authorization;
+using ETextBook.BusinessManagers;
 using ETextBook.BusinessManagers.Interfaces;
 using ETextBook.Data;
 using ETextBook.Data.Models;
 using ETextBook.Service.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
+using System.IO;
 
 namespace ETextBook.Configuration
 {
@@ -17,16 +21,28 @@ namespace ETextBook.Configuration
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
+            services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)  // отключил подтверждение аккаунта
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();  //AddRazorRuntimeCompilation - в режиме рантаима можем изменить динамический html райзор пейджа
             services.AddRazorPages();
+
+            services.AddSingleton<IFileProvider>(new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")));
         }
 
         public static void AddCustomServices(this IServiceCollection services)
         {
             services.AddScoped<IBlogBusinessManager, BlogBusinessManager>();
+            services.AddScoped<IAdminBusinessManager,AdminBusinessManager>();
+
+
             services.AddScoped<IBlogService, Service.BlogService>();
+
+        }
+
+        public static void AddCustomAuthorization(this IServiceCollection services)
+        {
+            //services.AddSingleton<IAuthorizationHandler, BlogAuthorizationHandler>();
+            services.AddTransient<IAuthorizationHandler, BlogAuthorizationHandler>();
         }
     }
 }
