@@ -2,11 +2,13 @@
 using ETextBook.BusinessManagers.Interfaces;
 using ETextBook.Data.Models;
 using ETextBook.Models.BlogVM;
+using ETextBook.Models.HomeVM;
 using ETextBook.Service.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using PagedList.Core;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -33,6 +35,21 @@ namespace ETextBook.BusinessManagers
             this.blogService = blogService;
             this.webHostEnvironment = webHostEnvironment;
             this.authorizationService = authorizationService;
+        }
+
+        public IndexViewModel GetIndexViewModel(string searchString, int? page)
+        {
+            int pageSize = 2;
+            int pageNumber = page ?? 1;
+            var blogs = blogService.GetBlogs(searchString ?? string.Empty)
+                .Where(blog => blog.Published);
+
+            return new IndexViewModel
+            {
+                Blogs = new StaticPagedList<Blog>(blogs.Skip((pageNumber - 1) * pageSize).Take(pageSize), pageNumber, pageSize, blogs.Count()),
+                SearchString = searchString,
+                PageNumber = pageNumber
+            };
         }
 
         public async Task<Blog> CreateBlog(

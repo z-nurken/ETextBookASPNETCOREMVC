@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/fXBZ2Mcyzy/mOP0+kJ8L7f+GA4E2ayJdHkmkXiGQgKA1y0EDcbID4SNw5W2siX4DwKxsBAM3/+xVtE0c4LXhA==",
+  "dgSpecHash": "dsVKe08SgWb2qs7aasd1Tm8pUwdFhr18KeQuUbY8fqLzTB8oqTkDAh2UyYFjOnTfrw9fIJ1UN/YdV1YoQiNi0w==",
   "success": true,
   "projectFilePath": "C:\\Users\\n.zulpykharov\\source\\repos\\ETextBook\\ETextBook\\ETextBook.csproj",
   "expectedPackageFiles": [
@@ -66,6 +66,8 @@
     "C:\\Users\\n.zulpykharov\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\n.zulpykharov\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\n.zulpykharov\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\n.zulpykharov\\.nuget\\packages\\pagedlist.core\\1.17.4\\pagedlist.core.1.17.4.nupkg.sha512",
+    "C:\\Users\\n.zulpykharov\\.nuget\\packages\\pagedlist.core.mvc\\3.0.0\\pagedlist.core.mvc.3.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\n.zulpykharov\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\n.zulpykharov\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
