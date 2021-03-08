@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ETextBook.Data.Models;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -9,6 +10,7 @@ namespace ETextBook.Models.AdminVM
 {
     public class AboutViewModel
     {
+        public ApplicationUser applicationUser { get; set; }
         [Display(Name = "Header Image")]
         public IFormFile HeaderImage { get; set; }
         [Display(Name = "Sub-header")]

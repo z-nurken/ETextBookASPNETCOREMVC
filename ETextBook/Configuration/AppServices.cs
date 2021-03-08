@@ -33,6 +33,7 @@ namespace ETextBook.Configuration
         {
             services.AddScoped<IPostBusinessManager, PostBusinessManager>();
             services.AddScoped<IAdminBusinessManager,AdminBusinessManager>();
+            services.AddScoped<IHomeBusinessManager, HomeBusinessManager>();
 
 
             services.AddScoped<IPostService, Service.PostService>();

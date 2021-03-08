@@ -45,6 +45,7 @@ namespace ETextBook.BusinessManagers
             var applicationUser = await userManager.GetUserAsync(claimsPrincipal);
             return new AboutViewModel
             {
+                applicationUser = applicationUser,
                 SubHeader = applicationUser.SubHeader,
                 Content = applicationUser.AboutContent
             };

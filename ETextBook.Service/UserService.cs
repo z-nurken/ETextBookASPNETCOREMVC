@@ -17,6 +17,11 @@ namespace ETextBook.Service
             this.applicationDbContext = applicationDbContext;
         }
 
+        public ApplicationUser Get(string id)
+        {
+            return applicationDbContext.Users
+                .FirstOrDefault(user => user.Id == id);
+        }
         public async Task<ApplicationUser> Update(ApplicationUser applicationUser)
         {
             applicationDbContext.Update(applicationUser);
