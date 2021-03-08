@@ -14,19 +14,19 @@ namespace ETextBook.BusinessManagers
     public class AdminBusinessManager : IAdminBusinessManager
     {
         private UserManager<ApplicationUser> userManager;
-        private IBlogService blogService;
+        private IPostService postService;
 
-        public AdminBusinessManager(UserManager<ApplicationUser> userManager, IBlogService blogService)
+        public AdminBusinessManager(UserManager<ApplicationUser> userManager, IPostService postService)
         {
             this.userManager = userManager;
-            this.blogService = blogService;
+            this.postService = postService;
         }
         public async Task<IndexViewModel> GetAdminDashboard(ClaimsPrincipal claimsPrincipal)
         {
             var applicationUser = await userManager.GetUserAsync(claimsPrincipal);
             return new IndexViewModel
             {
-                Blogs = blogService.GetBlogs(applicationUser)
+                Posts = postService.GetPosts(applicationUser)
             };
         }
     }

@@ -13,17 +13,17 @@ namespace ETextBook.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IBlogBusinessManager blogBusinessManager;
+        private readonly IPostBusinessManager postBusinessManager;
 
-        public HomeController(ILogger<HomeController> logger, IBlogBusinessManager blogBusinessManager)
+        public HomeController(ILogger<HomeController> logger, IPostBusinessManager postBusinessManager)
         {
             _logger = logger;
-            this.blogBusinessManager = blogBusinessManager;
+            this.postBusinessManager = postBusinessManager;
         }
 
         public IActionResult Index(string searchString, int? page)
         {
-            return View(blogBusinessManager.GetIndexViewModel(searchString,page));
+            return View(postBusinessManager.GetIndexViewModel(searchString,page));
         }
 
 

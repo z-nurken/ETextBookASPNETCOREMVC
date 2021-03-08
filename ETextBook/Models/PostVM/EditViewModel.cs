@@ -6,12 +6,12 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ETextBook.Models.BlogVM
+namespace ETextBook.Models.PostVM
 {
     public class EditViewModel
     {
-        [Display(Name = "Header Image")]
-        public IFormFile BlogHeaderImage { get; set; }
-        public Blog Blog { get; set; }
+        [Display(Name = "Header Image")] 
+        public IFormFile HeaderImage { get; set; }
+        public Post Post { get; set; }
     }
 }

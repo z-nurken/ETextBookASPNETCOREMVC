@@ -5,12 +5,12 @@ using System.Linq;
 using ETextBook.Data.Models;
 using Microsoft.AspNetCore.Http;
 
-namespace ETextBook.Models.BlogVM
+namespace ETextBook.Models.PostVM
 {
     public class CreateViewModel 
     {
         [Required, Display(Name = "Header Image")]
-        public IFormFile BlogHeaderImage { get; set; }
-        public Blog Blog { get; set; }
+        public IFormFile HeaderImage { get; set; }
+        public Post Post { get; set; }
     }
 }

@@ -31,18 +31,18 @@ namespace ETextBook.Configuration
 
         public static void AddCustomServices(this IServiceCollection services)
         {
-            services.AddScoped<IBlogBusinessManager, BlogBusinessManager>();
+            services.AddScoped<IPostBusinessManager, PostBusinessManager>();
             services.AddScoped<IAdminBusinessManager,AdminBusinessManager>();
 
 
-            services.AddScoped<IBlogService, Service.BlogService>();
+            services.AddScoped<IPostService, Service.PostService>();
 
         }
 
         public static void AddCustomAuthorization(this IServiceCollection services)
         {
             //services.AddSingleton<IAuthorizationHandler, BlogAuthorizationHandler>();
-            services.AddTransient<IAuthorizationHandler, BlogAuthorizationHandler>();
+            services.AddTransient<IAuthorizationHandler, PostAuthorizationHandler>();
         }
     }
 }

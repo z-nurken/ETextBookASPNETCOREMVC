@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 
 namespace ETextBook.Authorization
 {
-    public class BlogAuthorizationHandler : AuthorizationHandler<OperationAuthorizationRequirement, Blog>
+    public class PostAuthorizationHandler : AuthorizationHandler<OperationAuthorizationRequirement, Post>
     {
         private readonly UserManager<ApplicationUser> userManager;
-        public BlogAuthorizationHandler(UserManager<ApplicationUser> userManager)
+        public PostAuthorizationHandler(UserManager<ApplicationUser> userManager)
         {
             this.userManager = userManager;
         }
-        protected override async Task HandleRequirementAsync(AuthorizationHandlerContext context, OperationAuthorizationRequirement requirement, Blog resource)
+        protected override async Task HandleRequirementAsync(AuthorizationHandlerContext context, OperationAuthorizationRequirement requirement, Post resource)
         {
             var applicationUser = await userManager.GetUserAsync(context.User);
             if((requirement.Name == Operations.Update.Name || requirement.Name == Operations.Delete.Name) && applicationUser == resource.Creator)

@@ -11,3 +11,10 @@ https://raw.githubusercontent.com/jhollingworth/bootstrap-wysihtml5/master/src/b
 //download package pagedlistcoremvc to etextbook
 //add to _viewimports.cshtml @addTagHelper *, PagedList.Core.Mvc
 //adding search to home index
+
+
+
+
+//What's the PersonalDataAttribute good for? 
+
+// resourceBased Authentication

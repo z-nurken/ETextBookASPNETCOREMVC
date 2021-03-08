@@ -9,8 +9,8 @@ namespace ETextBook.Models.HomeVM
 {
     public class IndexViewModel
     {
-        public IPagedList<Blog> Blogs { get; set; }
-        public string SearchString { get; set; }
+        public IPagedList<Post> Posts { get; set; }
+        public string SearchString { get; set; } 
         public int PageNumber { get; set; }
     }
 }
