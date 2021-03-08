@@ -63,5 +63,16 @@ namespace ETextBook.Controllers
             return actionResult.Result;
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Comment(PostViewModel postViewModel) 
+        { 
+            var actionResult = await postBusinessManager.CreateComment(postViewModel, User);
+
+            if (actionResult.Result is null)
+                return RedirectToAction("Index", new { postViewModel.Post.Id });
+
+            return actionResult.Result;
+        }
+
     }
 }

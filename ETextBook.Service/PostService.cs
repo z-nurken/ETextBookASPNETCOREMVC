@@ -26,6 +26,7 @@ namespace ETextBook.Service
                     .ThenInclude(comment => comment.Author)
                 .Include(post => post.Comments)
                     .ThenInclude(comment => comment.Comments)
+                        .ThenInclude(reply => reply.Parent)
                 .FirstOrDefault(post => post.Id == postId);
         }
 
@@ -48,12 +49,28 @@ namespace ETextBook.Service
 
         }
 
+        public Comment GetComment(int commentId)
+        {
+            return applicationDbContext.Comments
+                .Include(comment => comment.Author)
+                .Include(comment => comment.Post)
+                .Include(comment => comment.Parent)
+                .FirstOrDefault(comment => comment.Id == commentId);
+        }
+
         public async Task<Post> Add(Post post)
         {
             applicationDbContext.Add(post);
             await applicationDbContext.SaveChangesAsync();
 
             return post;
+        }
+        public async Task<Comment> Add(Comment comment)
+        {
+            applicationDbContext.Add(comment);
+            await applicationDbContext.SaveChangesAsync();
+
+            return comment;
         }
 
         public async Task<Post> Update(Post post)
