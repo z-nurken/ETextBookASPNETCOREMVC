@@ -90,7 +90,40 @@ namespace ETextBook.Data.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("ETextBook.Data.Models.Blog", b =>
+            modelBuilder.Entity("ETextBook.Data.Models.Comment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AuthorId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("ParentId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PostId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AuthorId");
+
+                    b.HasIndex("ParentId");
+
+                    b.HasIndex("PostId");
+
+                    b.ToTable("Comments");
+                });
+
+            modelBuilder.Entity("ETextBook.Data.Models.Post", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -128,39 +161,6 @@ namespace ETextBook.Data.Migrations
                     b.HasIndex("ApproverId");
 
                     b.HasIndex("CreatorId");
-
-                    b.ToTable("Blogs");
-                });
-
-            modelBuilder.Entity("ETextBook.Data.Models.Post", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int?>("BlogId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Content")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int?>("ParentId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("PoserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BlogId");
-
-                    b.HasIndex("ParentId");
-
-                    b.HasIndex("PoserId");
 
                     b.ToTable("Posts");
                 });
@@ -300,7 +300,28 @@ namespace ETextBook.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("ETextBook.Data.Models.Blog", b =>
+            modelBuilder.Entity("ETextBook.Data.Models.Comment", b =>
+                {
+                    b.HasOne("ETextBook.Data.Models.ApplicationUser", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorId");
+
+                    b.HasOne("ETextBook.Data.Models.Comment", "Parent")
+                        .WithMany()
+                        .HasForeignKey("ParentId");
+
+                    b.HasOne("ETextBook.Data.Models.Post", "Post")
+                        .WithMany("Comments")
+                        .HasForeignKey("PostId");
+
+                    b.Navigation("Author");
+
+                    b.Navigation("Parent");
+
+                    b.Navigation("Post");
+                });
+
+            modelBuilder.Entity("ETextBook.Data.Models.Post", b =>
                 {
                     b.HasOne("ETextBook.Data.Models.ApplicationUser", "Approver")
                         .WithMany()
@@ -313,27 +334,6 @@ namespace ETextBook.Data.Migrations
                     b.Navigation("Approver");
 
                     b.Navigation("Creator");
-                });
-
-            modelBuilder.Entity("ETextBook.Data.Models.Post", b =>
-                {
-                    b.HasOne("ETextBook.Data.Models.Blog", "Blog")
-                        .WithMany("Posts")
-                        .HasForeignKey("BlogId");
-
-                    b.HasOne("ETextBook.Data.Models.Post", "Parent")
-                        .WithMany()
-                        .HasForeignKey("ParentId");
-
-                    b.HasOne("ETextBook.Data.Models.ApplicationUser", "Poser")
-                        .WithMany()
-                        .HasForeignKey("PoserId");
-
-                    b.Navigation("Blog");
-
-                    b.Navigation("Parent");
-
-                    b.Navigation("Poser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -387,9 +387,9 @@ namespace ETextBook.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("ETextBook.Data.Models.Blog", b =>
+            modelBuilder.Entity("ETextBook.Data.Models.Post", b =>
                 {
-                    b.Navigation("Posts");
+                    b.Navigation("Comments");
                 });
 #pragma warning restore 612, 618
         }

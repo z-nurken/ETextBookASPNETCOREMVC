@@ -459,3 +459,4 @@ C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook\obj\Debug\net5.0\Razor\V
 C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook\obj\Debug\net5.0\Razor\Views\Post\Edit.cshtml.g.cs
 C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook\obj\Debug\net5.0\Razor\Views\Post\Index.cshtml.g.cs
 C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook\obj\Debug\net5.0\Razor\Views\Post\_Layout.cshtml.g.cs
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook\obj\Debug\net5.0\Razor\Views\Post\_ReadLayout.cshtml.g.cs
