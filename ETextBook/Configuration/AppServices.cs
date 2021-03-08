@@ -36,6 +36,7 @@ namespace ETextBook.Configuration
 
 
             services.AddScoped<IPostService, Service.PostService>();
+            services.AddScoped<IUserService, Service.UserService>();
 
         }
 
