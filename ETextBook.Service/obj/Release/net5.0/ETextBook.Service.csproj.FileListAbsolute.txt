@@ -1,0 +1,15 @@
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\bin\Release\net5.0\ETextBook.Service.deps.json
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\bin\Release\net5.0\ETextBook.Service.dll
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\bin\Release\net5.0\ref\ETextBook.Service.dll
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\bin\Release\net5.0\ETextBook.Service.pdb
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\bin\Release\net5.0\ETextBook.Data.dll
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\bin\Release\net5.0\ETextBook.Data.pdb
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\obj\Release\net5.0\ETextBook.Service.csprojAssemblyReference.cache
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\obj\Release\net5.0\ETextBook.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\obj\Release\net5.0\ETextBook.Service.AssemblyInfoInputs.cache
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\obj\Release\net5.0\ETextBook.Service.AssemblyInfo.cs
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\obj\Release\net5.0\ETextBook.Service.csproj.CoreCompileInputs.cache
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\obj\Release\net5.0\ETextBook.Service.csproj.CopyComplete
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\obj\Release\net5.0\ETextBook.Service.dll
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\obj\Release\net5.0\ref\ETextBook.Service.dll
+C:\Users\n.zulpykharov\source\repos\ETextBook\ETextBook.Service\obj\Release\net5.0\ETextBook.Service.pdb
